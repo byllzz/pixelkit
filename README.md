@@ -66,3 +66,10 @@ cd pixelkit-icons
 # open index.html in your browser (or use Live Server)
 # e.g. in VSCode use Live Server extension, or host with a static server:
 # npx serve .   or   npx http-server .
+
+```
+# License 📄
+
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+
+Please contact me at bilalmlkdev@gmail.com if you have any feedback or suggestions. :star: Star it, if you like it!
