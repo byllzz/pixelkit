@@ -26,7 +26,7 @@ PixelKit Icons is a lightweight, client-first SVG icon browser and toolbox. Brow
 
 ---
 
-## ✨ What is PixelKit?
+## What is PixelKit?
 
 PixelKit is a small, dependency-light web app that:
 - Loads an SVG index from a CDN (jsDelivr) and inlines icons into a responsive grid.
@@ -37,7 +37,7 @@ PixelKit is a small, dependency-light web app that:
 
 ---
 
-## ✨ Features
+## Features
 
 - ✔️ Fast, client-first icon browser
 - ✔️ Search and client-side filtering (persisted)
