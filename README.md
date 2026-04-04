@@ -1,6 +1,6 @@
-# <a href="https://pixelkit.vercel.app" target="_blank">PixelKit Icons - Pixel-perfect SVG Icons</a>
+# <a href="https://pixelkit.vercel.app" target="_blank">PixelKit - Pixel-perfect SVG Icons</a>
 
-PixelKit Icons is a lightweight, client-first SVG icon browser and toolbox. Browse an icon index on a CDN, inline icons into the page, and quickly search, resize, recolor, and copy pixel-perfect SVG markup — all in the browser with no uploads. Ideal for developers and designers who want fast access to SVG assets, easy styling via `currentColor`, and a small, accessible UI.
+PixelKit is a lightweight, client-first SVG icon browser and toolbox. Browse an icon index on a CDN, inline icons into the page, and quickly search, resize, recolor, and copy pixel-perfect SVG markup — all in the browser with no uploads. Ideal for developers and designers who want fast access to SVG assets, easy styling via `currentColor`, and a small, accessible UI.
 
 <p align="left">
   <a href="./LICENSE">
@@ -11,14 +11,14 @@ PixelKit Icons is a lightweight, client-first SVG icon browser and toolbox. Brow
   <a href="https://github.com/byllzz">
     <img src="https://img.shields.io/badge/Author-Bilal%20Malik-9B72FF.svg?style=flat" alt="Author" />
   </a>
-  <a href="https://github.com/byllzz/pixelkit-icons/releases">
+  <a href="https://github.com/byllzz/pixelkit/releases">
     <img src="https://img.shields.io/badge/Latest%20Release-Jan%209%2C%202026-9B72FF.svg" alt="Latest Release" />
   </a>
 </p>
 
 <br>
 
-[![Visit PixelKit Icons](https://img.shields.io/badge/View-PixelKit%20Icons-9B72FF?style=flat)](https://pixelkit.vercel.app)
+[![Visit PixelKit](https://img.shields.io/badge/View-PixelKit%20Icons-9B72FF?style=flat)](https://pixelkit.vercel.app)
 
 <img width="100%" alt="PixelKit Icons preview" src="./assets/previews/pixelkit-preview.png" />
 
@@ -60,12 +60,12 @@ Clone the repository and open locally, or host static files (Netlify / Vercel / 
 
 ```bash
 # clone
-git clone https://github.com/byllzz/pixelkit-icons.git
-cd pixelkit-icons
+git clone https://github.com/byllzz/pixelkit
+cd pixelkit
 
 # open index.html in your browser (or use Live Server)
-# e.g. in VSCode use Live Server extension, or host with a static server:
-# npx serve .   or   npx http-server .
+#  use Live Server extension
+
 
 ```
 # License 📄
