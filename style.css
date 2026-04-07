@@ -25,40 +25,11 @@ body {
   scroll-behavior: smooth;
 }
 
-/* :root { note : (--uncomment-- it if you want the White theme as initial..)
-  --background-color: #ffffff;
-  --txt-color: #000000;
-  --main-font: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --primary-font: "Superstar";
-  --page-bg: #f7f7f9;
-  --max-width: 1200px;
-  --radius: 6px;
-  --panel: rgba(0, 0, 0, 0.04);
-  --panel-2: rgba(0, 0, 0, 0.06);
-  --panel-hover: rgba(0, 0, 0, 0.03);
-  --accent: #ffff00;
-  --muted: rgba(0, 0, 0, 0.6);
-  --icon-size: 16px;
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  --header-offset: 80px;
-}
-
-:root.theme {
-  --background-color: #000000;
-  --txt-color: #ffffff;
-  --page-bg: #07070a;
-  --panel: rgba(255, 255, 255, 0.04);
-  --panel-2: rgba(255, 255, 255, 0.02);
-  --panel-hover: rgba(255, 255, 255, 0.06);
-  --muted: rgba(255, 255, 255, 0.6);
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-} */
 
 :root {
   --background-color: #18181b;
   --txt-color: #ffffff;
   --main-font: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* --primary-font: "Superstar"; */
   --primary-font: 'Nippo', sans-serif;
   --page-bg: #07070a;
   --max-width: 1480px;
@@ -71,7 +42,16 @@ body {
   --icon-size: 16px;
   --shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
   --header-offset: 80px;
+
+    --input-focus: #ffff00;
+      --font-color: #323232;
+      --font-color-sub: #666;
+      --bg-color: #fff;
+      --bg-color-alt: #666;
+      --main-color: #323232;
 }
+
+
 
 :root.theme {
   --background-color: #ffffff;
@@ -129,19 +109,92 @@ a {
   overflow-y: visible;
 }
 
-:root {
-  --input-focus: #ffff00;
-  --font-color: #323232;
-  --font-color-sub: #666;
-  --bg-color: #fff;
-  --bg-color-alt: #666;
-  --main-color: #323232;
+
+/* header */
+header {
+  width: 100%;
+  max-width:100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 75px;
+  background-color: var(--background-color);
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  border-bottom: 1px solid var(--muted);
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1250px;
+  margin-inline: auto;
+  height: 100%;
+  padding: 5px 0;
+  color: var(--background-color);
+}
+.nav-logo {
+  overflow: hidden;
+}
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-logo a svg {
+  height: 25px !important;
+  fill: var(--txt-color);
+}
+.nav-logo a span {
+  font-family: var(--primary-font);
+  font-size: 23px;
+  color: var(--txt-color);
+  font-weight: 600;
+}
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-center a {
+  font-family: var(--primary-font);
+  color: #A1A1AA;
+  font-weight: 450;
+  font-size: 15px;
+  padding: 6px 13px;
+  border-radius: 5px;
+}
+.nav-center a:hover {
+  background-color: #111;
+  color: #fff;
+}
+.nav-right {
+  display: flex;
+  align-items:center;
+}
+ .download-all {
+  background-color: var(--accent);
+  padding: 9px 22px;
+  border-radius: 5px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  display: flex;
+  align-items:center;
+  gap: 7px;
+}
+.download-all svg {
+  height: 24px;
+}
+/* toggle */
 .theme-toggle-wrapper {
   transform: rotate(90deg);
 }
-
 .switch {
   position: relative;
   display: flex;
@@ -193,91 +246,6 @@ a {
 
 .toggle:checked+.slider:before {
   transform: translateX(27px);
-}
-
-/* header */
-
-header {
-  width: 100%;
-  max-width:100%;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 75px;
-  background-color: var(--background-color);
-  padding: 0 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 9999;
-  border-bottom: 1px solid var(--muted);
-}
-
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1250px;
-  margin-inline: auto;
-  height: 100%;
-  padding: 5px 0;
-  color: var(--background-color);
-}
-.nav-logo {
-  overflow: hidden;
-}
-.nav-logo a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.nav-logo a svg {
-  height: 25px !important;
-  fill: var(--txt-color);
-}
-.nav-logo a span {
-  font-family: var(--primary-font);
-  font-size: 23px;
-  color: var(--txt-color);
-  font-weight: 600;
-}
-.nav-center {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.nav-center a {
-  font-family: var(--primary-font);
-  color: #A1A1AA;
-  font-weight: 450;
-  font-size: 15px;
-  padding: 6px 13px;
-  border-radius: 5px;
-}
-
-.nav-center a:hover {
-  background-color: #111;
-  color: #fff;
-}
-.nav-right {
-  display: flex;
-  align-items:center;
-}
- .download-all {
-  background-color: var(--accent);
-  padding: 9px 22px;
-  border-radius: 5px;
-  font-family: var(--primary-font);
-  font-weight: 600;
-  display: flex;
-  align-items:center;
-  gap: 7px;
-}
-.download-all svg {
-  height: 24px;
 }
 
 /* herosection */
@@ -350,13 +318,13 @@ nav {
   font-family: var(--primary-font);
 }
 
-
 /* controls */
 .controls-section {
   width: 100%;
   max-width: 770px;
   margin: 20px auto 20px;
 }
+/* search */
 .search-icons {
   min-width: 220px;
   display: flex;
@@ -408,21 +376,8 @@ nav {
   font-size: 10px;
   font-family: var(--primary-font);
 }
-/* icons here */
-.icon-container {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
-  scrollbar-width: none !important;
-  padding-bottom: 3rem;
-}
 
-.icon-container::-webkit-scrollbar {
-  display: none !important;
-}
-
+/* icons funcs */
 .icons-funcs {
   z-index: 90;
   backdrop-filter: blur(6px);
@@ -554,7 +509,23 @@ nav {
   outline: 2px solid rgba(255, 255, 255, 0.06);
   outline-offset: 2px;
 }
+/* icons here */
+.icon-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  scrollbar-width: none !important;
+  padding-bottom: 3rem;
+}
 
+.icon-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+/* icons grid wrapper */
 .icons-grid {
   max-width: var(--max-width);
   margin: 40px auto 0;
@@ -583,7 +554,7 @@ background-color:color-mix(in oklab, #27272a 40%, transparent);
 
 .icon-card-copybtn {
   position: absolute;
-  right: -5px;
+  right: -2px;
   top: 10px;
   height: 12px;
   opacity: 0;
@@ -594,11 +565,6 @@ background-color:color-mix(in oklab, #27272a 40%, transparent);
   height: 20px !important;
   fill: var(--txt-color);
 }
-
-/* .icon-card:hover {
-  background-color: var(--panel-hover);
-  transform: translateY(-4px);
-} */
 
 .icon-card:hover .icon-card-copybtn {
   opacity: 1;
@@ -622,8 +588,6 @@ background-color:color-mix(in oklab, #27272a 40%, transparent);
 }
 
 /* about */
-
-
 .pixel-info-section {
   font-family: var(--primary-font);
   color: var(--txt-color);
@@ -638,10 +602,11 @@ background-color:color-mix(in oklab, #27272a 40%, transparent);
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 500;
   margin-bottom: 30px;
   text-transform: none;
   letter-spacing: -0.5px;
+  color: var(--txt-color);
 }
 
 .description {
@@ -659,40 +624,17 @@ h2 {
   font-size: 15px;
   line-height: 1.4;
 }
-
-/* The NPM Command Box */
 .npm-badge {
-  background-color: var(--code-bg);
-  color: var(--text-muted);
+  background-color: #27272A;
+    border: 1px solid #3f3f46;
+    color: var(--txt-color);
   padding: 4px 8px;
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
 }
 
-/* Custom Highlight for the image's specific gray tone */
-p {
-  color: #a0a0a0;
-  /* Slightly lighter than gray-500 */
-}
-
-h2 {
-  color: #ffffff;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  .description,
-  .cta-text {
-    font-size: 1rem;
-  }
-}
-/* review */
-
+/* reviews */
 .reviews-section {
   padding: 80px 20px;
   text-align: center;
@@ -713,17 +655,12 @@ h2 {
   font-weight: 800;
   margin-top: 0;
 }
-
-/* Container for the scattered cards */
 .card-container {
   position: relative;
   max-width: 800px;
   height: 450px;
-  /* Necessary height to contain absolute elements */
   margin: 40px auto 0;
 }
-
-/* Base Card Style */
 .review-card {
   position: absolute;
   width: 260px;
@@ -751,9 +688,7 @@ h2 {
   font-size: 0.85rem;
   display: block;
 }
-
-/* Individual Card Styling & Positioning */
-
+/* all card of reviews */
 .card-black {
   background: var(--accent);
   color: #000;
@@ -780,7 +715,6 @@ h2 {
   transform: rotate(8deg);
   z-index: 1;
   opacity: 1;
-  /* Faded background look */
 }
 
 .card-white-front {
@@ -804,8 +738,6 @@ h2 {
   transform: rotate(6deg);
   z-index: 5;
 }
-
-/* Responsive: Stack them on mobile */
 @media (max-width: 768px) {
   .card-container {
     display: flex;
@@ -833,13 +765,11 @@ h2 {
   height: 100vh;
 }
 
-/* Header Section */
 .faq-header {
   margin-bottom: 40px;
 }
 
 .badge {
-  /* background: #e0e0ff; */
   background-color: color-mix(in oklab, #27272a 40%, transparent);
   color: var(--accent);
   padding: 6px 12px;
@@ -876,7 +806,6 @@ h2 {
   gap: 15px;
 }
 
-/* Accordion Card */
 details {
   background-color: color-mix(in oklab, #27272a 40%, transparent);
   border-radius: 12px;
@@ -895,7 +824,6 @@ summary {
   align-items: center;
 }
 
-/* Remove default arrow in Chrome/Safari */
 summary::-webkit-details-marker {
   display: none;
 }
@@ -909,7 +837,6 @@ summary::-webkit-details-marker {
   transition: 0.3s;
 }
 
-/* Arrow Icon */
 .icon::after {
   content: '';
   position: absolute;
@@ -929,7 +856,6 @@ summary::-webkit-details-marker {
   line-height: 1.6;
 }
 
-/* Active State Styles */
 details[open] {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -938,20 +864,16 @@ details[open] .icon {
   background: var(--txt-color);
   transform: rotate(180deg);
 }
-
-/* Responsive Tweak */
 @media (max-width: 768px) {
   .faq-col {
     flex: 100%;
   }
 }
-/* footer */
 
+/* footer */
 footer {
   width: 100%;
   height: 100vh;
-  /* background-color: var(--txt-color);
-  color: var(--background-color); */
   background-color: black;
   color: white;
   padding: 168px 16px;
@@ -985,7 +907,7 @@ footer {
   gap: 10px;
   font-size: 22px;
   font-family: var(--primary-font);
-  color: var(--txt-color);
+  color:#fff;
 }
 
 .footer-links button svg {
@@ -1061,10 +983,7 @@ footer {
   transform: translateX(-50%);
 }
 
-
-
-
-/* large desktops ---> keep spacing but slightly scale down very large headings */
+/* media quires */
 @media (max-width: 1400px) {
   .hero-heading {
     font-size: 96px;
@@ -1081,7 +1000,7 @@ footer {
   }
 }
 
-/* default desktop -> tablet crossover */
+/* tablet crossover */
 @media (max-width: 1200px) {
   header {
     max-width: 720px;
@@ -1118,9 +1037,6 @@ footer {
     gap: 12px;
   }
 
-  /* .search-icons {
-    width: 420px;
-  } */
 }
 
 /* laptop / small desktop / large tablet */
@@ -1155,16 +1071,6 @@ footer {
   .icons-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
-  /* .search-icons {
-    width: 360px;
-    min-width: 180px;
-  } */
-
-  /* .icons-size {
-    width: 380px;
-  } */
-
   .icon-card {
     height: 150px;
     width: 150px;
@@ -1182,13 +1088,6 @@ footer {
 
 /* original smaller tablet breakpoint */
 @media (max-width: 940px) {
-  /* .search-icons {
-    width: 200px;
-  } */
-
-  /* .icons-size {
-    display: none;
-  } */
 
   .icons-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1291,12 +1190,6 @@ footer {
     width: 26px;
     height: 26px;
   }
-
-  /*
-  .search-icons {
-    width: 180px;
-  } */
-
   .theme-toggle-wrapper {
     right: 12px;
     bottom: 12px;
@@ -1376,11 +1269,6 @@ footer {
     height: 22px;
   }
 
-  /* .search-icons {
-    width: 140px;
-    min-width: 120px;
-  } */
-
   .panel {
     padding: 6px 8px;
     min-height: 48px;
@@ -1457,11 +1345,6 @@ footer {
     width: 20px;
     height: 20px;
   }
-
-  /* .search-icons {
-    width: 120px;
-  } */
-
   .theme-toggle-wrapper {
     right: 8px;
     bottom: 8px;
