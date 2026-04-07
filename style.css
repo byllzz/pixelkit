@@ -28,7 +28,10 @@ body {
 
 :root {
   --background-color: #18181b;
+  --secondary-background-color: #27272A;
+  --bg-color-hover : #111;
   --txt-color: #ffffff;
+  --secondry-txt-color :#A1A1AA;
   --main-font: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --primary-font: 'Nippo', sans-serif;
   --page-bg: #07070a;
@@ -42,7 +45,8 @@ body {
   --icon-size: 16px;
   --shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
   --header-offset: 80px;
-
+  --border-color : #3f3f46;
+  --card-bg:color-mix(in oklab, #27272a 40%, transparent);
     --input-focus: #ffff00;
       --font-color: #323232;
       --font-color-sub: #666;
@@ -54,14 +58,20 @@ body {
 
 
 :root.theme {
-  --background-color: #ffffff;
+  --background-color: #fafafa;
+  --secondary-background-color : #fff;
+  --secondry-txt-color : #333;
+  /* --bg-color-hover :#ccc; */
+  --border-color : #ccc;
   --txt-color: #000000;
-  --panel: rgba(0, 0, 0, 0.04);
-  --panel-2: rgba(0, 0, 0, 0.06);
+  --panel: #111;
+  --panel-2: #111;
   --panel-hover: rgba(0, 0, 0, 0.03);
   --muted: rgba(0, 0, 0, 0.6);
   --toggle-thumb: var(--background-color);
   --bg-color: #000000;
+  --card-bg:#f4f4f5;
+
 }
 
 html {
@@ -164,14 +174,14 @@ nav {
 }
 .nav-center a {
   font-family: var(--primary-font);
-  color: #A1A1AA;
+  color: var(--secondry-txt-color);
   font-weight: 450;
   font-size: 15px;
   padding: 6px 13px;
   border-radius: 5px;
 }
 .nav-center a:hover {
-  background-color: #111;
+  background-color: var(--bg-color-hover);
   color: #fff;
 }
 .nav-right {
@@ -279,7 +289,7 @@ nav {
   margin: 20px auto 0;
   text-transform: capitalize;
   font-size: 14px;
-  color: #A1A1AA;
+  color: var(--secondry-txt-color);
 }
 
 .hero-subheading span {
@@ -294,8 +304,8 @@ nav {
 .see-all {
   padding: 9px 22px;
   border-radius: 5px;
-  background-color:#27272A;
-  border: 1px solid #3f3f46;
+  background-color:var(--secondary-background-color);
+  border: 1px solid var(--border-color);
   display: flex;
   color: var(--txt-color);
   font-family: monospace;
@@ -330,8 +340,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #27272A;
-    border: 1px solid #3f3f46;
+  background-color: var(--secondary-background-color);
+    border: 1px solid var(--border-color);
   color: var(--txt-color);
   height: 48px;
   border-radius: 7px;
@@ -370,9 +380,10 @@ nav {
   flex: 0 0 20px;
 }
 .command {
-  background-color: #111;
+  background-color: var(--bg-color-hover);
   padding: 8px 12px;
   border-radius: 5px;
+  color: #fff;
   font-size: 10px;
   font-family: var(--primary-font);
 }
@@ -425,7 +436,7 @@ nav {
   -webkit-appearance: none;
   height: 2px;
   border-radius: 6px;
-  background: var(--txt-color);
+  background: #fff;
   outline: none;
 }
 
@@ -438,7 +449,7 @@ nav {
 }
 
 .icons-size span {
-  color: var(--txt-color);
+  color: #fff;
   font-weight: 600;
   min-width: 46px;
   text-align: center;
@@ -456,6 +467,7 @@ nav {
   border-radius: 6px;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .color-swatch {
@@ -468,17 +480,18 @@ nav {
 }
 
 #color-name {
-  color: var(--txt-color);
+  color: #000;
   z-index: 2;
   font-size: 20px;
+  font-family: var(--primary-font);
 }
 
 .icon-colorPlate input[type="color"] {
   position: absolute;
   opacity: 0;
   pointer-events: auto;
-  border: none;
   outline: none;
+  border: none;
 }
 
 .reverse-properties,
@@ -549,12 +562,12 @@ nav {
   box-sizing: border-box;
   transition: background-color .18s ease, transform .12s ease;
   position: relative;
-background-color:color-mix(in oklab, #27272a 40%, transparent);
+background-color: var(--card-bg);
 }
 
 .icon-card-copybtn {
   position: absolute;
-  right: -2px;
+  right: 2px;
   top: 10px;
   height: 12px;
   opacity: 0;
@@ -625,7 +638,7 @@ h2 {
   line-height: 1.4;
 }
 .npm-badge {
-  background-color: #27272A;
+  background-color: var(--secondary-background-color);
     border: 1px solid #3f3f46;
     color: var(--txt-color);
   padding: 4px 8px;
@@ -770,8 +783,8 @@ h2 {
 }
 
 .badge {
-  background-color: color-mix(in oklab, #27272a 40%, transparent);
-  color: var(--accent);
+  background-color:#000;
+  color:#fff;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -788,7 +801,7 @@ h2 {
 .faq-header p {
   max-width: 500px;
   line-height: 1.2;
-  color: #A1A1AA;
+  color: var(--secondry-txt-color);
 }
 
 /* Grid Layout */
@@ -807,7 +820,7 @@ h2 {
 }
 
 details {
-  background-color: color-mix(in oklab, #27272a 40%, transparent);
+  background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   overflow: hidden;
