@@ -72,6 +72,6 @@ cd pixelkit
 
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
-# Suggestions
+# Feedback
 
-Please contact me at bilalmlkdev@gmail.com if you have any feedback or suggestions. :star: Star it, if you like it!
+Please contact me at **bilalmlkdev@gmail.com**. if you have any feedback or suggestions. :star: Star it, if you like it!
